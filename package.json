@@ -1,0 +1,7 @@
+{
+  "name": "quotient",
+  "version": "1.0.0",
+  "private": true,
+  "description": "QUOTIENT, a satirical calculator with zero dependencies",
+  "scripts": { "test": "node --test tests/*.test.cjs", "start": "node serve.cjs" }
+}

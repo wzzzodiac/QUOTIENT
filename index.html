@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="Premium math. Fictional prices. A parody; no real charges.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' file:; script-src 'self' file:; style-src 'self' file:; img-src 'self' file: data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>QUOTIENT — The price of knowing</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="src/styles.css">
+  <script src="src/math.js" defer></script>
+  <script src="src/state.js" defer></script>
+  <script src="src/app.js" defer></script>
+</head>
+<body>
+  <a href="#expression" class="skip">Skip to calculator</a>
+  <header class="site-header">
+    <a class="wordmark" href="#" aria-label="Quotient, home"><span class="brand-icon" aria-hidden="true">÷</span> QUOTIENT<span class="registered">®*</span></a>
+    <span class="edition">UNNECESSARY PRECISION / Nº 001</span>
+    <button class="text-button" id="access">Have a code? <span aria-hidden="true">↗</span></button>
+  </header>
+  <main>
+    <section class="experience" aria-label="Quotient calculator">
+      <div class="editorial">
+        <div class="eyebrow"><span class="tiny-line"></span> MATH. MONETIZED.</div>
+        <h1>Think<br> freely.<br><span>Pay</span><br><em>dearly.</em><span class="asterisk" aria-hidden="true">✳</span></h1>
+        <p class="intro">Financial ruin. Now with decimals.</p>
+        <p class="parody-note">PARODY · NO REAL CHARGES</p>
+        <div class="offer"><span class="offer-price">80<span>€</span></span><div>PER ANSWER</div></div>
+        <button class="editorial-link" id="view-plans">View plans <span aria-hidden="true">↗</span></button>
+      </div>
+      <div class="product-stage">
+        <div class="stage-caption"><span>OBJECT 001 / CALCULATOR</span><span></span></div>
+        <div class="calculator" id="calculator">
+          <div class="device-top"><span>QUOTIENT <small>ONE</small></span><span class="device-status" id="device-status"><i></i> LOCKED</span></div>
+          <div class="display">
+            <div class="display-top"><span id="display-label">EXPRESSION</span><button id="angle" aria-label="Change angle unit, currently degrees">DEG</button></div>
+            <label class="sr-only" for="expression">Math expression</label>
+            <input id="expression" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" maxlength="240" placeholder="0" aria-describedby="math-help">
+            <div class="result-row"><span id="result-marker" aria-hidden="true">=</span><output id="result" for="expression">Result locked</output></div>
+          </div>
+          <div class="mode-row"><span></span><button id="science-toggle" aria-expanded="false" aria-controls="science">ƒx <span>Scientific</span> +</button></div>
+          <div class="scientific" id="science" hidden>
+            <button data-insert="sin(" aria-label="Sine">sin</button><button data-insert="cos(" aria-label="Cosine">cos</button><button data-insert="tan(" aria-label="Tangent">tan</button><button data-insert="sqrt(" aria-label="Square root">√x</button>
+            <button data-insert="log(" aria-label="Base-ten logarithm">log</button><button data-insert="ln(" aria-label="Natural logarithm">ln</button><button data-insert="^" aria-label="Power">xʸ</button><button data-insert="pi" aria-label="Pi constant">π</button>
+            <button data-insert="e" aria-label="Euler constant">e</button><button data-insert="^2" aria-label="Square">x²</button><button data-insert="abs(" aria-label="Absolute value">abs</button><button id="math-info" aria-label="Math help">?</button>
+          </div>
+          <div class="keypad">
+            <button class="utility clear" data-action="clear" aria-label="Clear all">AC</button><button class="utility" data-insert="(" aria-label="Open parenthesis">(</button><button class="utility" data-insert=")" aria-label="Close parenthesis">)</button><button class="operator" data-insert="÷" aria-label="Divide">÷</button>
+            <button data-insert="7">7</button><button data-insert="8">8</button><button data-insert="9">9</button><button class="operator" data-insert="×" aria-label="Multiply">×</button>
+            <button data-insert="4">4</button><button data-insert="5">5</button><button data-insert="6">6</button><button class="operator" data-insert="−" aria-label="Subtract">−</button>
+            <button data-insert="1">1</button><button data-insert="2">2</button><button data-insert="3">3</button><button class="operator" data-insert="+" aria-label="Add">+</button>
+            <button data-insert="%" aria-label="Percent">%</button><button data-insert="0">0</button><button data-insert="." aria-label="Decimal point">.</button><button class="utility" data-action="delete" aria-label="Backspace">⌫</button>
+            <button class="equals" id="calculate"><span id="equals-copy">Get result</span><span class="equal-symbol" aria-hidden="true">=</span></button>
+          </div>
+          <div class="device-bottom"><span></span><span class="screws" aria-hidden="true">⊕</span></div>
+        </div>
+        <div class="under-device"><kbd>ENTER =</kbd></div>
+      </div>
+    </section>
+    <div class="sr-only" id="status" role="status" aria-live="polite"></div>
+    <section class="history" id="history" aria-label="Recent results" hidden><div class="eyebrow">RECENT RESULTS</div><ol id="history-list"></ol></section>
+    <details class="help" id="math-help"><summary>Controls &amp; math rules</summary><p>Enter or = calculates. Escape closes a dialog or clears the expression. Backspace deletes. Use * or ×, / or ÷, and a decimal point or comma.</p><p>Percent means ÷100: 200 × 10% = 20; 200 + 10% = 200.1. Use explicit multiplication: 2 × (3 + 4). Powers associate right: 2^3^2 = 512; −2^2 = −4. DEG uses degrees; RAD uses radians. log is base 10; ln is base e. Results show 12 significant digits.</p></details>
+  </main>
+  <footer><span>QUOTIENT © 2026</span><span>* Fictional brand · V1</span></footer>
+  <dialog id="modal" aria-labelledby="modal-title"><button class="close" id="close-modal" aria-label="Close dialog">×</button><div id="modal-content"></div><div class="modal-disclaimer">SIMULATED PAYMENT · NO REAL CHARGES</div></dialog>
+  <noscript>Enable JavaScript to use this calculator.</noscript>
+</body>
+</html>
